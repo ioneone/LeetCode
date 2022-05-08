@@ -5,21 +5,20 @@ import java.util.List;
 import java.util.Stack;
 
 /**
- * You are given a nested list of integers nestedList. Each element is either an integer or a list whose elements may also be integers or other lists. Implement an iterator to flatten it.
+ * You are given a nested list of integers nestedList. Each element is either an integer or a list
+ * whose elements may also be integers or other lists. Implement an iterator to flatten it.
  * 
  * Implement the NestedIterator class:
  * 
- * NestedIterator(List<NestedInteger> nestedList) Initializes the iterator with the nested list nestedList.
+ * NestedIterator(List<NestedInteger> nestedList) Initializes the iterator with the nested list
+ * nestedList.
  * 
- * int next() Returns the next integer in the nested list. 
- * boolean hasNext() Returns true if there are still some integers in the nested list and false otherwise.
- * Your code will be tested with the following pseudocode:
+ * int next() Returns the next integer in the nested list. boolean hasNext() Returns true if there
+ * are still some integers in the nested list and false otherwise. Your code will be tested with the
+ * following pseudocode:
  * 
- * initialize iterator with nestedList
- * res = []
- * while iterator.hasNext()
- *     append iterator.next() to the end of res
- * return res
+ * initialize iterator with nestedList res = [] while iterator.hasNext() append iterator.next() to
+ * the end of res return res
  * 
  * If res matches the expected flattened list, then your code will be judged as correct.
  */
@@ -28,7 +27,7 @@ public class LC341 implements Iterator<Integer> {
   private Integer cachedNext = null;
 
   private final Stack<Data> stack;
-  
+
   public LC341(List<NestedInteger> nestedList) {
     this.stack = new Stack<>();
 
@@ -63,7 +62,7 @@ public class LC341 implements Iterator<Integer> {
 
       return nestedInteger.getInteger();
     } else {
-      
+
       if (currentIndex + 1 < nestedList.size()) {
         stack.add(new Data(nestedList, currentIndex + 1));
       }
@@ -72,10 +71,10 @@ public class LC341 implements Iterator<Integer> {
       if (nextNestedList.size() > 0) {
         stack.add(new Data(nextNestedList, 0));
       }
-      
+
       return next();
     }
-    
+
   }
 
   @Override
@@ -133,7 +132,8 @@ public class LC341 implements Iterator<Integer> {
 
   public static void main(String[] args) {
     // [1, [2]]
-    List<NestedInteger> list = List.of(new NestedInteger(1, null), new NestedInteger(null, List.of(new NestedInteger(2, null))));
+    List<NestedInteger> list = List.of(new NestedInteger(1, null),
+        new NestedInteger(null, List.of(new NestedInteger(2, null))));
     LC341 i = new LC341(list);
     while (i.hasNext()) {
       System.out.println(i.next());
