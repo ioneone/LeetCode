@@ -27,7 +27,7 @@ import java.util.Map;
  * 
  * 9 -> wxyz
  */
-public class LC17 {
+public class LC0017 {
 
   private static final Map<Character, List<Character>> MAP = Map.of('2', List.of('a', 'b', 'c'),
       '3', List.of('d', 'e', 'f'), '4', List.of('g', 'h', 'i'), '5', List.of('j', 'k', 'l'), '6',
