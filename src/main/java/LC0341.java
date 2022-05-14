@@ -22,13 +22,13 @@ import java.util.Stack;
  * 
  * If res matches the expected flattened list, then your code will be judged as correct.
  */
-public class LC341 implements Iterator<Integer> {
+public class LC0341 implements Iterator<Integer> {
 
   private Integer cachedNext = null;
 
   private final Stack<Data> stack;
 
-  public LC341(List<NestedInteger> nestedList) {
+  public LC0341(List<NestedInteger> nestedList) {
     this.stack = new Stack<>();
 
     if (nestedList.size() > 0) {
@@ -134,13 +134,13 @@ public class LC341 implements Iterator<Integer> {
     // [1, [2]]
     List<NestedInteger> list = List.of(new NestedInteger(1, null),
         new NestedInteger(null, List.of(new NestedInteger(2, null))));
-    LC341 i = new LC341(list);
+    LC0341 i = new LC0341(list);
     while (i.hasNext()) {
       System.out.println(i.next());
     }
 
     list = List.of(new NestedInteger(null, List.of()));
-    i = new LC341(list);
+    i = new LC0341(list);
     while (i.hasNext()) {
       System.out.println(i.next());
     }

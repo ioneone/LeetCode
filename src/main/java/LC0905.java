@@ -9,7 +9,7 @@ import java.util.Queue;
  * 
  * Return any array that satisfies this condition.
  */
-public class LC905 {
+public class LC0905 {
 
   public static int[] sortArrayByParity(int[] nums) {
 

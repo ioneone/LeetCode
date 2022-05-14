@@ -6,7 +6,7 @@ package main.java;
  * 
  * Return the shortest such subarray and output its length.
  */
-public class LC581 {
+public class LC0581 {
 
   public static int findUnsortedSubarray(int[] nums) {
 

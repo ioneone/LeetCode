@@ -8,7 +8,7 @@ import java.util.Stack;
  * 
  * Note that after backspacing an empty text, the text will continue empty.
  */
-public class LC844 {
+public class LC0844 {
   public static boolean backspaceCompare(String s, String t) {
     Stack<Character> sStack = new Stack<>();
     Stack<Character> tStack = new Stack<>();

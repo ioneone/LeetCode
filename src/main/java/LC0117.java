@@ -11,7 +11,7 @@ import java.util.List;
  * 
  * Initially, all next pointers are set to NULL.
  */
-public class LC117 {
+public class LC0117 {
   public Node connect(Node root) {
     if (root == null) {
       return null;
@@ -86,7 +86,7 @@ public class LC117 {
 
     node3.right = node7;
 
-    LC117 lc = new LC117();
+    LC0117 lc = new LC0117();
     lc.connect(node1);
 
     System.out.println(node1.next); // null

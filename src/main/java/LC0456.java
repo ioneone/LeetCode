@@ -8,7 +8,7 @@ import java.util.Stack;
  * 
  * Return true if there is a 132 pattern in nums, otherwise, return false.
  */
-public class LC456 {
+public class LC0456 {
 
   public static boolean find132pattern(int[] nums) {
 

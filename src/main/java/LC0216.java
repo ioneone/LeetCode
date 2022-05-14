@@ -13,7 +13,7 @@ import java.util.Map;
  * possible valid combinations. The list must not contain the same combination twice, and the
  * combinations may be returned in any order.
  */
-public class LC216 {
+public class LC0216 {
 
   public static List<List<Integer>> combinationSum3(int k, int n) {
     return helper(k, n, 1, new ArrayList<>());

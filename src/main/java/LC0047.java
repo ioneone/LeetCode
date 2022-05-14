@@ -11,7 +11,7 @@ import java.util.Set;
  * Given a collection of numbers, nums, that might contain duplicates, return all possible unique
  * permutations in any order.
  */
-public class LC47 {
+public class LC0047 {
   public List<List<Integer>> permuteUnique(int[] nums) {
     Map<Integer, Integer> map = new HashMap<>();
     Set<Integer> keys = new HashSet<>();
@@ -55,7 +55,7 @@ public class LC47 {
   }
 
   public static void main(String[] args) {
-    LC47 lc = new LC47();
+    LC0047 lc = new LC0047();
     System.out.println(lc.permuteUnique(new int[] {1, 1, 2})); // [[1,1,2], [1,2,1], [2,1,1]]
     System.out.println(lc.permuteUnique(new int[] {1, 2, 3})); // [[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]
   }
