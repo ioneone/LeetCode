@@ -81,8 +81,7 @@ public class LC0051 {
     return solutions;
   }
 
-  public static record Cell(int row, int col) {
-  }
+  public static record Cell(int row, int col) {}
 
   public static void main(String[] args) {
     LC0051 lc = new LC0051();
