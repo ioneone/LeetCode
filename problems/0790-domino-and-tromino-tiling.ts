@@ -38,36 +38,36 @@
 // xxxxxy
 function numTilings(n: number): number {
   if (n === 1) {
-    return 1;
+    return 1
   }
 
   if (n === 2) {
-    return 2;
+    return 2
   }
 
-  const mod = Math.pow(10, 9) + 7;
+  const mod = Math.pow(10, 9) + 7
 
-  const dp1 = [...Array(n + 1)];
-  const dp2 = [...Array(n + 1)];
-  const dp3 = [...Array(n + 1)];
+  const dp1 = [...Array(n + 1)]
+  const dp2 = [...Array(n + 1)]
+  const dp3 = [...Array(n + 1)]
 
-  dp1[1] = 1;
-  dp2[1] = 0;
-  dp3[1] = 0;
+  dp1[1] = 1
+  dp2[1] = 0
+  dp3[1] = 0
 
-  dp1[2] = 2;
-  dp2[2] = 1;
-  dp3[2] = 1;
+  dp1[2] = 2
+  dp2[2] = 1
+  dp3[2] = 1
 
   // dp1[3] = 5
   // dp2[3] = 2
   // dp3[3] = 2
 
   for (let k = 3; k <= n; k++) {
-    dp1[k] = (dp1[k - 1] + dp2[k - 1] + dp3[k - 1] + dp1[k - 2]) % mod;
-    dp2[k] = (dp3[k - 1] + dp1[k - 2]) % mod;
-    dp3[k] = (dp2[k - 1] + dp1[k - 2]) % mod;
+    dp1[k] = (dp1[k - 1] + dp2[k - 1] + dp3[k - 1] + dp1[k - 2]) % mod
+    dp2[k] = (dp3[k - 1] + dp1[k - 2]) % mod
+    dp3[k] = (dp2[k - 1] + dp1[k - 2]) % mod
   }
 
-  return dp1[n];
+  return dp1[n]
 }

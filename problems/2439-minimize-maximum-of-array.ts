@@ -8,14 +8,14 @@
 // dp[k] = minimizeArrayValue for nums[0...k]
 // dp[k] = max(dp[k-1],  ceil(sum(nums[0...k])/k+1))
 function minimizeArrayValue(nums: number[]): number {
-  const sum = Array(nums.length);
-  const dp = Array(nums.length);
-  sum[0] = nums[0];
-  dp[0] = nums[0];
+  const sum = Array(nums.length)
+  const dp = Array(nums.length)
+  sum[0] = nums[0]
+  dp[0] = nums[0]
   for (let i = 1; i < nums.length; i++) {
-    sum[i] = sum[i - 1] + nums[i];
-    dp[i] = Math.max(dp[i - 1], Math.ceil(sum[i] / (i + 1)));
+    sum[i] = sum[i - 1] + nums[i]
+    dp[i] = Math.max(dp[i - 1], Math.ceil(sum[i] / (i + 1)))
   }
 
-  return dp[nums.length - 1];
+  return dp[nums.length - 1]
 }
